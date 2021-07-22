@@ -1,0 +1,24 @@
+{
+      "files.associations": {
+            "iosfwd": "cpp",
+            "string": "cpp",
+            "string_view": "cpp",
+            "algorithm": "cpp",
+            "complex": "cpp",
+            "new": "cpp",
+            "__config": "cpp",
+            "__hash_table": "cpp",
+            "__locale": "cpp",
+            "array": "cpp",
+            "functional": "cpp",
+            "filesystem": "cpp",
+            "iomanip": "cpp",
+            "ios": "cpp",
+            "iterator": "cpp",
+            "locale": "cpp",
+            "ostream": "cpp",
+            "sstream": "cpp",
+            "type_traits": "cpp",
+            "vector": "cpp"
+      }
+}

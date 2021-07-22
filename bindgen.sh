@@ -7,5 +7,5 @@ exec bindgen \
     --raw-line 'use libc::FILE as FILE;' \
     --size_t-is-usize \
     -o src/lib.rs \
-    wrapper.h \
+    ./external/grok/src/lib/jp2/grok.h -- -std=c++11 -x c++  \
     "$@"

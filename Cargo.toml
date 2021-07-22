@@ -12,6 +12,9 @@ links = "grokj2k"
 
 [dependencies]
 libc = "0.2"
+image = "*"
+cc = { version =  "1.0.67", features = ["parallel"] }
 
 [build-dependencies]
 pkg-config = "0.3.19"
+cc = { version =  "1.0.67", features = ["parallel"] }
