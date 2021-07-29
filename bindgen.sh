@@ -7,7 +7,7 @@ bindgen --no-prepend-enum-name \
     --raw-line 'use libc::FILE as FILE;' \
     --size_t-is-usize \
     -o src/lib.rs \
-    ./external/grok/src/lib/jp2/grok.h -- -std=c++11 -x c++ \
+    ./external/grok/src/lib/jp2/grok.hpp -- -std=c++11 -x c++ \
     -I./external/grok/src/lib/jp2 \
     -I./external/grok/src/lib/jp2/codestream \
     -I./external/grok/src/lib/jp2/codestream/markers \
