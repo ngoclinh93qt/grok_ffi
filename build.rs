@@ -1,13 +1,13 @@
 fn main() {
-    if std::env::var("DOCS_RS").is_ok() {
-        return;
-    }
-    pkg_config::Config::new()
-        .atleast_version("9.2.0")
-        .probe("libgrokj2k")
-        .unwrap();
+    // if std::env::var("DOCS_RS").is_ok() {
+    //     return;
+    // }
+    // pkg_config::Config::new()
+    //     .atleast_version("9.2.0")
+    //     .probe("libgrokj2k")
+    //     .unwrap();
 
-        use std::path::Path;
+         use std::path::Path;
 
     let mut cc = cc::Build::new();
     let coredir = Path::new("external/grok/src/lib/jp2");
@@ -28,8 +28,8 @@ fn main() {
      cc.include(codestreamdir);
      cc.include(plugindir);
     cc.cpp(true);
-    cc.cpp_set_stdlib("stdc++");
-    cc.cpp_set_stdlib("c++");
+    cc.cpp_link_stdlib("stdc++");
+    cc.cpp_link_stdlib("libc++");
 
     let files = [
           "grok.cpp",
@@ -37,6 +37,6 @@ fn main() {
     for file in files.iter() {
         cc.file(coredir.join(file));
     }
-    cc.compile("grokj2k-sys");
+    cc.compile("grokj2k-sys.a");
 
 }
