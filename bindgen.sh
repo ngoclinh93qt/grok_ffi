@@ -1,11 +1,14 @@
 #!/bin/bash
 
-bindgen --no-prepend-enum-name \
+bindgen --opaque-type=FILE \
+    --no-prepend-enum-name \
     --allowlist-function 'grk_.*' \
     --blocklist-type 'FILE' \
     --blocklist-type '_IO_FILE' \
     --raw-line 'use libc::FILE as FILE;' \
     --size_t-is-usize \
+    --distrust-clang-mangling \
+    --no-layout-tests \
     -o src/lib.rs \
     ./external/grok/src/lib/jp2/grok.h -- -std=c++11 -x c++ \
     -I./external/grok/src/lib/jp2 \
